@@ -22,5 +22,5 @@
   </view>
 </view>
 <view class='pa-30 ma-t30'>
-  <view class='btnr fo-32 fo-w ma-t30'>去拿钱</view>
+  <view class='btnr fo-32 fo-w ma-t30' data-path='/pages/pub/pub' bindtap='navTo'>去拿钱</view>
 </view>

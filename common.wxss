@@ -260,19 +260,19 @@
 
 /*边框*/
 .border{
-  border: solid 1px #e1e1e1
+  border: solid 1px #f3f3f3
 }
 .border-b{
-  border-bottom: solid 1px #e1e1e1
+  border-bottom: solid 1px #f3f3f3
 }
 .border-t{
-  border-top: solid 1px #e1e1e1
+  border-top: solid 1px #f3f3f3
 }
 .border-l{
-  border-left: solid 1px #e1e1e1
+  border-left: solid 1px #f3f3f3
 }
 .border-r{
-  border-right: solid 1px #e1e1e1
+  border-right: solid 1px #f3f3f3
 }
 
 /*加载动画*/

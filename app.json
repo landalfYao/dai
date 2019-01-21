@@ -9,7 +9,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#2575fc",
-    "navigationBarTitleText": "51贷",
+    "navigationBarTitleText": "房贷通",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {

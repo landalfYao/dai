@@ -1,2 +1,15 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="">
+  <view class='hh panel-between item-center'>
+    <view class='panel-start item-center'>
+      <view class='avatar'>
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class='ma-l30'>
+        <view class='fo-w bold fo-30'><open-data type="userNickName" lang="zh_CN"></open-data></view>
+      </view>
+    </view>
+  </view>
+</view>
+<i-cell title="我的订单" is-link i-class="border-b"></i-cell>
+<!-- <i-cell title="我的优惠券" is-link i-class="border-b"></i-cell> -->
+<i-cell title="成为经纪人" is-link i-class="border-b"></i-cell>

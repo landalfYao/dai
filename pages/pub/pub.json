@@ -1,1 +1,9 @@
-{}
+{
+  "navigationBarTitleText": "填写资料",
+  "usingComponents": {
+    "i-panel": "../../dist/panel/index",
+    "i-input": "../../dist/input/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index"
+  }
+}

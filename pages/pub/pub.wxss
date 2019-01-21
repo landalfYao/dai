@@ -1,1 +1,3 @@
-/* pages/pub/pub.wxss */
+page{
+  background: #f3f3f3
+}
