@@ -26,5 +26,5 @@
 </i-panel>
 
 <view class='pa-30 ma-t30'>
-  <view class='btnr fo-32 fo-w ma-t30' data-path='/pages/pub/pub' bindtap='navTo'>提交资料</view>
+  <view class='btnr fo-32 fo-w ma-t30'  bindtap='submit'>提交资料</view>
 </view>

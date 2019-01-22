@@ -22,11 +22,57 @@ Page({
       money:'',
       date:''
     },
+    props:[
+      {name:'name',msg:'请填写姓名'},
+      { name: 'idcard', msg: '请填写身份证号码' },
+      { name: 'phone', msg: '请填写手机号' },
+      { name: 'position', msg: '请填写职业' },
+      { name: 'city', msg: '请填写工作城市' }, 
+      { name: 'gjj', msg: '请选择是否有本地公积金' },
+      { name: 'sb', msg: '请选择是否有本地社保' },
+      { name: 'housetype', msg: '请选择房产类型' },
+      { name: 'zxqk', msg: '请选择装修情况' },
+      { name: 'area', msg: '请填写面积' },
+      { name: 'hcar', msg: '请选择是否有车' },
+      { name: 'xyqk', msg: '请选择信用情况' },
+      { name: 'money', msg: '请填写贷款金额' },
+      { name: 'date', msg: '请填写贷款期限' },
+    ],
     htflag:0,
     gjj:['有','无'],
     houseType: ['有房，但不确认房产类型','无房产','小产权房', '经适/限价房', '房改/危改房', '商铺','厂房','商住两用房','办公楼','军产房','商品住房','宅基地/自建房'],
     zx:['毛坯','简装修','精装修','豪华装修'],
     xy: ['信用良好，无逾期', '无信用卡或贷款', '1年内逾期超过3次或超过90天','1年内逾期少于3次或少于90天']
+  },
+  submit(){
+    let props = this.data.props
+    let formData = this.data.formData
+    let temp = -1
+    for(let i in props){
+      if(formData[props[i].name]==''){
+        temp = i
+        break;
+      }
+    }
+    if(temp == -1){
+      wx.showLoading({
+        title: '提交中',
+      })
+      formData.wx_id = wx.getStorageSync("user").id
+      app.com.post('order/add',formData,function(res){
+        wx.hideLoading()
+        if(res.code == 1){
+          wx.showToast({
+            title: '提交成功'
+          })
+        }
+      })
+    }else{
+      wx.showToast({
+        title: props[temp].msg,
+        icon:'none'
+      })
+    }
   },
   actionSheet(arr,cb){
     wx.showActionSheet({
