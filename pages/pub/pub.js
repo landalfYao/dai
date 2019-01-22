@@ -20,7 +20,8 @@ Page({
       hcar:'',//是否有车
       xyqk:'',//信用情况
       money:'',
-      date:''
+      date:'',
+      title:'房贷通咨询'
     },
     props:[
       {name:'name',msg:'请填写姓名'},
