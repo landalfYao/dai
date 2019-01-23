@@ -10,6 +10,7 @@
     </view>
   </view>
 </view>
+<i-cell title="借款记录" is-link i-class="border-b"></i-cell>
 <i-cell title="我的订单" is-link i-class="border-b"></i-cell>
 <!-- <i-cell title="我的优惠券" is-link i-class="border-b"></i-cell> -->
-<i-cell title="成为经纪人" is-link i-class="border-b"></i-cell>
+<!-- <i-cell title="成为经纪人" is-link i-class="border-b"></i-cell> -->

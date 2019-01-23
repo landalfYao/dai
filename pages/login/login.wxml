@@ -1,0 +1,20 @@
+
+<!-- <view> -->
+<view class="container">
+  <view class="wechatapp">
+    <!-- <image class="header" src="/images/wechatapp.png"></image> -->
+    <view class="header">
+      <open-data class="" type="userAvatarUrl"></open-data>
+    </view>
+  </view>
+  <view class='pa-b20 border-b'>
+    <view class="auth-title">手机号</view>
+    <input placeholder='请输入手机号' value='{{phone}}' class='w-100' type='number' maxlength='11' bindinput='phoneinput'></input>
+   
+  </view>
+  
+  <view class="auth-title ma-t30">申请获取以下权限</view>
+  <view class="auth-subtitle">获得你的公开信息（昵称、头像等）</view>
+  <button class="login-btn" openType="getUserInfo" lang="zh_CN" bindgetuserinfo="authorLogin">授权登录</button>
+</view>
+<!-- </view> -->
