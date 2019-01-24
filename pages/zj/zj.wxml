@@ -1,2 +1,42 @@
-<!--pages/zj/zj.wxml-->
-<text>pages/zj/zj.wxml</text>
+<view class="gh">银 行 直 通 车</view>
+<view wx:if="{{list.length > 0}}">
+  <view class='bg-g pa-t20 pa-b20 pa-l30 pa-l30 fo-30 fo-g'>
+    推荐服务
+  </view>
+  <view class='panel panel-between'>
+    <view class='avatar'>
+      <image class='avatar' src='{{list[0].icon}}' mode='aspectFill'></image>
+    </view>
+    <view class='qwe'>
+      <view class='panel-between'>
+        <view class='fo-30 bold'>{{list[0].bankname}}</view>
+        <view class='fo-m fo-26 bold'>{{list[0].p_min}}万元-{{list[0].p_max}}万元</view>
+      </view>
+      <view class='panel-between item-center'>
+        <view class='fo-26 fo-g ma-t10' style='width:300rpx'>{{list[0].des}}</view>
+        <view class='gbgh' data-title='{{list[0]+"贷款咨询"}}' bindtap='navto'>立即申请</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{list.length > 1}}">
+  <view class='bg-g pa-t20 pa-b20 pa-l30 pa-l30 fo-30 fo-g'>
+    其他服务
+  </view>
+  <view class='panel panel-between border-b' wx:for="{{list}}" wx:if="{{index != 0}}">
+    <view class='avatar'>
+      <image class='avatar' src='{{item.icon}}' mode='aspectFill'></image>
+    </view>
+    <view class='qwe'>
+      <view class='panel-between'>
+        <view class='fo-30 bold'>{{item.bankname}}</view>
+        <view class='fo-m fo-26 bold'>{{item.p_min}}万元-{{item.p_max}}万元</view>
+      </view>
+      <view class='panel-between item-center'>
+        <view class='fo-26 fo-g ma-t10' style='width:300rpx'>{{item.des}}</view>
+        <view class='gbgh' data-title='{{item.bankname+"贷款咨询"}}' bindtap='navto'>立即申请</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,1 +1,25 @@
-/* pages/zj/zj.wxss */
+.gh{
+  padding: 50rpx;
+  background: linear-gradient(to  top,#02a3f7,#2575fc);
+  text-align: center;
+  font-size: 50rpx;
+  color: #fff
+}
+.avatar{
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #f3f3f3
+}
+.qwe{
+  width: 540rpx;
+}
+.gbgh{
+  width: 170rpx;
+  line-height: 60rpx;
+  border: 1rpx solid #02a3f7;
+  text-align: center;
+  border-radius: 60rpx;
+  font-size: 26rpx;
+  color: #02a3f7;
+  margin-top: 10rpx
+}

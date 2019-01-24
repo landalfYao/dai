@@ -134,6 +134,12 @@ Page({
    */
   onLoad: function (options) {
     _this = this
+    if(options.title){
+      this.setData({
+        'formData.title': options.title
+      })
+    }
+    
   },
 
   /**

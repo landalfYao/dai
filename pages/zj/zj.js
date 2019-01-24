@@ -1,66 +1,70 @@
-// pages/zj/zj.js
+const app = getApp()
+let _this;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    pageSize:10,
+    pageIndex:1,
+    wheres:'is_show=1 and is_delete=0',
+    sorts:'sort asc',
+    list:[],
+    total:0
   },
-
+  navto(e){
+    wx.navigateTo({
+      url: '/pages/pub/pub?title='+e.currentTarget.dataset.title,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    _this = this
+    this.getList(0)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getList(type){
+    if(type == 0){
+      this.data.pageIndex = 1
+    }else{
+      this.data.pageIndex += 1
+    }
+    wx.showLoading({
+      title: '加载中',
+    })
+    app.com.post('bank/get',{
+      wheres:this.data.wheres,
+      pageIndex:this.data.pageIndex,
+      pageSize:this.data.pageSize,
+      sorts: this.data.sorts
+    },function(res){
+      wx.hideLoading()
+      if(res.code == 1){
+        let arr = []
+        if(type == 0){
+          arr = res.data.list
+        }else{
+          arr = _this.data.list
+          for(let i in res.data.list){
+            arr.push(res.data.list[i])
+          }
+        }
+        _this.setData({
+          list:arr,
+          total:res.data.total
+        })
+      } 
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  onPullDownRefresh(){
+    this.getList(0)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onReachBottom(){
+    if(this.data.list.length < this.data.total){
+      this.getList(1)
+    }
   }
+
 })
