@@ -1,0 +1,15 @@
+<view class="panel border-b" wx:for="{{list}}" >
+  <view class='panel-between item-center'>
+    <view class='fo-30 bold'>{{item.title}}</view>
+    <view class='fo-30 dgb'>{{item.state}}</view>
+  </view>
+  <view class='panel-start ma-t10'>
+    <view class='fo-26'>贷款金额<text class='fo-m bold'>{{item.money}}万元</text></view>
+    <view class='fo-26 ma-l30 fo-g'>贷款期限{{item.date}}个月</view>
+  </view>
+  <view class='panel-between item-center ma-t10'>
+    <view class='fo-24 fo-g'>{{item.create_time}}</view>
+    <!-- <view class='fo-26 fo-bl'>查看详情</view> -->
+  </view>
+</view>
+

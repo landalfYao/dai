@@ -14,9 +14,16 @@ Page({
     total:0
   },
   navto(e){
-    wx.navigateTo({
-      url: '/pages/pub/pub?title='+e.currentTarget.dataset.title,
-    })
+    if (!wx.getStorageSync("user").phone) {
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/pub/pub?title=' + e.currentTarget.dataset.title,
+      })
+    }
+    
   },
   /**
    * 生命周期函数--监听页面加载
@@ -40,6 +47,7 @@ Page({
       pageSize:this.data.pageSize,
       sorts: this.data.sorts
     },function(res){
+      wx.stopPullDownRefresh()
       wx.hideLoading()
       if(res.code == 1){
         let arr = []

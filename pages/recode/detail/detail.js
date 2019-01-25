@@ -15,8 +15,8 @@ Page({
   onLoad: function (options) {
     _this = this
   },
-  navTo(e) {
-    app.com.navTo(e)
+  getMsg(){
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -29,11 +29,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (!wx.getStorageSync("user").phone) {
-      wx.navigateTo({
-        url: '/pages/login/login',
-      })
-    } 
+
   },
 
   /**
@@ -57,5 +53,17 @@ Page({
 
   },
 
-  
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
 })

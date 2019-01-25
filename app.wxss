@@ -10,3 +10,6 @@
   text-align: center;
   border-radius: 100rpx
 }
+.fo-bl{
+  color: #2575fc
+}

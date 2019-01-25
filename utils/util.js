@@ -205,25 +205,6 @@ const util = {
     }
     return timeSpanStr;
   },
-  cancel(oid, name, cb) {
-    this.post('help/update/state', {
-      state: 4,
-      id: oid
-    }, function (res) {
-
-      if (res.code == 1) {
-        wx.showToast({
-          title: '取消成功',
-        })
-        cb(true)
-      } else {
-        cb(false)
-        wx.showToast({
-          title: '取消失败',
-          icon: 'none'
-        })
-      }
-    })
-  }
+  
 }
 module.exports = util

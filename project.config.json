@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -61,7 +61,19 @@
 				{
 					"id": -1,
 					"name": "直通车",
-					"pathName": "pages/zj/zj"
+					"pathName": "pages/zj/zj",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "借款记录",
+					"pathName": "pages/recode/recode",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "s",
+					"pathName": "pages/guide/guide"
 				}
 			]
 		}

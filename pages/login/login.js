@@ -25,7 +25,6 @@ Page({
    * 授权登录
    */
   authorLogin: function(e) {
-    console.log(e)
     let _this = this;
     if (this.data.phone == '' && this.data.phone.length != 11) {
       wx.showToast({
@@ -33,7 +32,10 @@ Page({
         icon: 'none'
       })
     } else {
-      
+      wx.showLoading({
+        title: '登录中',
+        mask:true
+      })
       // 执行微信登录
       wx.login({
         success: function(res) {
@@ -43,6 +45,7 @@ Page({
           form.id = wx.getStorageSync("user").id
           app.com.post('wx/user/update', form, function(res) {
             // 记录token user_id
+            wx.hideLoading()
             wx.setStorageSync('user', res.data);
             // 跳转回原页面
             _this.navigateBack();

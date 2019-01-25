@@ -1,0 +1,2 @@
+<view class='mkl' bindtap='clearc'>跳过 {{num}}</view>
+<image src="/img/d.jpg" style="width:750rpx;height:100vh" mode="aspectFill"></image>

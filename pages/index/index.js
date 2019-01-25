@@ -7,10 +7,23 @@ Page({
     
   },
   navTo(e) {
-    app.com.navTo(e)
+    if(!wx.getStorageSync("user").phone){
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    } else {
+      app.com.navTo(e)
+    }
+    
   },
   onLoad: function () {
-    
+    if(!wx.getStorageSync("g")){
+      wx.redirectTo({
+        url: '/pages/guide/guide',
+      })
+    }else{
+      wx.removeStorageSync("g")
+    }
   },
   onShareAppMessage(){
     return {

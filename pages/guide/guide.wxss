@@ -1,0 +1,16 @@
+image{
+  display: block
+}
+.mkl{
+  width: 120rpx;
+  height: 50rpx;
+  font-size: 26rpx;
+  background-color: rgba(0, 0, 0, 0.4);
+  line-height: 50rpx;
+  text-align: center;
+  color: #fff;
+  border-radius: 50rpx;
+  position: fixed;
+  top: 30rpx;
+  right: 30rpx
+}

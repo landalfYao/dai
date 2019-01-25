@@ -5,10 +5,13 @@
     "pages/zj/zj",
     "pages/mine/mine",
     "pages/pub/pub",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/recode/recode",
+    "pages/recode/detail/detail",
+    "pages/guide/guide"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#2575fc",
     "navigationBarTitleText": "房贷通",
     "navigationBarTextStyle":"white"

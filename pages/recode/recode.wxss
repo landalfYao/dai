@@ -1,0 +1,10 @@
+/* pages/recode/recode.wxss */
+.dgb{
+  width: 120rpx;
+  line-height: 55rpx;
+  text-align: center;
+  color:#fff;
+  font-size: 22rpx;
+  background: #02a3f7;
+  border-radius: 10rpx 0 10rpx 0
+}
