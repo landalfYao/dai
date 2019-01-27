@@ -1,8 +1,7 @@
-<view class="indd">
+<!-- <view class="indd">
   <view class='text-center fo-w fo-40 pa-t30'>房贷难？利率高？流程晕？</view>
   <view class='text-center fo-w fo-30 ma-t30'>一站式房贷管家为你服务</view>
 
-  <!-- 圈 S-->
   <view>
     <view class='jjd'>
       <view class='modi'></view>
@@ -12,7 +11,6 @@
       <view class='itemsd'></view>
     </view>
   </view>
-  <!-- 圈 E-->
 
   <view class='mkl text-center'>
     <view class='fo-w fo-30'>信用额度高达</view>
@@ -23,4 +21,15 @@
 </view>
 <view class='pa-30 ma-t30'>
   <view class='btnr fo-32 fo-w ma-t30' data-path='/pages/pub/pub' bindtap='navTo'>去拿钱</view>
+</view> -->
+<view class='byd'>
+<image src="/img/d.jpg" style="width:750rpx;height:100vh" mode="aspectFill"></image>
+
+
+</view>
+<view class='asdf'>
+<view>
+   <view class='qnq'  data-path='/pages/pub/pub' bindtap='navTo'>去拿钱</view>
+</view>
+ 
 </view>

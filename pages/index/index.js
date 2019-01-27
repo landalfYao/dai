@@ -17,10 +17,14 @@ Page({
     
   },
   onLoad: function () {
+    wx.setNavigationBarColor({
+      frontColor: '#000000',
+      backgroundColor: '#ffffff',
+    })
     if(!wx.getStorageSync("g")){
-      wx.redirectTo({
-        url: '/pages/guide/guide',
-      })
+      // wx.redirectTo({
+      //   url: '/pages/guide/guide',
+      // })
     }else{
       wx.removeStorageSync("g")
     }

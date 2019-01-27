@@ -1,15 +1,45 @@
 @import './common.wxss';
-.fo-m{
-  color: #FF6666
+
+.fo-m {
+  color: #f66;
 }
-.btnr{
-  background: linear-gradient(to right top,#02a3f7,#2575fc);
+
+.btnr {
+  background: linear-gradient(to right top, #02a3f7, #2575fc);
   width: 500rpx;
   margin: auto;
   line-height: 100rpx;
   text-align: center;
-  border-radius: 100rpx
+  border-radius: 100rpx;
 }
-.fo-bl{
-  color: #2575fc
+
+.fo-bl {
+  color: #2575fc;
+}
+
+.byd {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.qnq {
+  background: linear-gradient(to right top, #02a3f7, #2575fc);
+  width: 350rpx;
+  margin: auto;
+  line-height: 100rpx;
+  text-align: center;
+  border-radius: 100rpx;
+  color: #fff;
+  margin-top: 190rpx
+}
+
+.asdf {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  top: 0;
+  align-items: center;
 }
