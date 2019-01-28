@@ -1,29 +1,26 @@
-<i-panel title="填写基本资料">
-  <i-input value="{{ formData.name }}"  title="姓名" placeholder="输入真实姓名" />
-  <i-input value="{{ formData.phone }}" type="number" title="手机号" maxlength="11" placeholder="请输入11位手机号码" />
-  <i-input value="{{ formData.idcard }}" type="number" title="身份证号码" maxlength="18" placeholder="请输入18位身份证号码" />
+<i-panel title="填写资料(以下信息必填)">
+  <i-input value="{{ formData.name }}" right title="姓名" placeholder="输入真实姓名" />
+  <i-input value="{{ formData.phone }}" right type="number" title="手机号" i-class='border-t' maxlength="11" placeholder="请输入11位手机号码" />
+  <i-input value="{{ formData.money }}" right type="text" title="贷款金额(单位:万元)"  placeholder="贷款金额" />
+  <i-input value="{{ formData.date }}" right type="text" title="贷款期限(单位:月)" i-class='border-t' placeholder="请输入月数" />
+  <i-input value="{{ formData.area }}" right type="text" title="面积" i-class='border-t' placeholder="填写面积" />
+  <!-- <i-input value="{{ formData.position }}" right  title="职业" i-class="border-t" placeholder="输入您的职业" /> -->
+  <i-cell title="职业" value="{{formData.position || '请选择'}}" bind:click="zyclick" is-link i-class="border-t"></i-cell>
+  <picker range='{{houseType}}' value='{{htflag}}' bindchange='htclick'>
+    <i-cell title="名下房产类型" value="{{formData.housetype || '请选择'}}" i-class="border-t"  is-link ></i-cell>
+  </picker>
 </i-panel>
 
-<i-panel title="填写职业信息">
-  <i-input value="{{ formData.position }}"  title="职业" placeholder="输入您的职业" />
-  <i-input value="{{ formData.city }}"  title="工作城市" placeholder="填写工作城市" />
+<i-panel title="填写更多信息(以下信息选填)">
+  <i-input value="{{ formData.idcard }}" right type="number" title="身份证号码" maxlength="18" placeholder="请输入18位身份证号码" />
+  <i-input value="{{ formData.city }}" right  title="工作城市" i-class='border-t' placeholder="填写工作城市" />
   <i-cell title="是否有本地公积金" value="{{formData.gjj || '请选择'}}" bind:click="gjjclick" is-link i-class="border-t"></i-cell>
   <i-cell title="是否有本地社保" value="{{formData.sb || '请选择'}}" bind:click="sbclick" is-link i-class="border-t"></i-cell>
+  <i-cell title="装修情况" value="{{formData.zxqk || '请选择'}}" bind:click="zxclick" is-link i-class="border-t"></i-cell>
+  <i-cell title="名下是否有车" value="{{formData.hcar || '请选择'}}" bind:click="carclick" is-link i-class="border-t"></i-cell>
+  <i-cell title="信用情况" value="{{formData.xyqk || '请选择'}}" bind:click="xyclick" is-link i-class="border-t"></i-cell>
 </i-panel>
 
-<i-panel title="填写房产信息">
-  <picker range='{{houseType}}' value='{{htflag}}' bindchange='htclick'>
-    <i-cell title="名下房产类型" value="{{formData.housetype || '请选择'}}"  is-link i-class="border-t"></i-cell>
-  </picker>
-  <i-cell title="装修情况" value="{{formData.zxqk || '请选择'}}" bind:click="zxclick" is-link i-class="border-t"></i-cell>
-  <i-input value="{{ formData.area }}" type="text" title="面积" i-class='border-t' placeholder="填写面积" />
-  <i-cell title="名下是否有车" value="{{formData.hcar || '请选择'}}" bind:click="carclick" is-link i-class="border-t"></i-cell>
-</i-panel>
-<i-panel title="填写贷款信息">
-  <i-cell title="信用情况" value="{{formData.xyqk || '请选择'}}" bind:click="xyclick" is-link i-class="border-t"></i-cell>
-  <i-input value="{{ formData.money }}" type="text" title="贷款金额(单位:万元)" i-class='border-t' placeholder="贷款金额" />
-  <i-input value="{{ formData.date }}" type="text" title="贷款期限(单位:月)" i-class='border-t' placeholder="请输入月数" />
-</i-panel>
 
 <view class='pa-30 ma-t30'>
   <view class='btnr fo-32 fo-w ma-t30'  bindtap='submit'>提交资料</view>

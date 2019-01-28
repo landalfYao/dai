@@ -11,7 +11,7 @@ Page({
       idcard:'',
       phone:'',
       position:'',
-      city:'',
+      city:'杭州',
       gjj:'',//公积金
       sb:'',//社保
       housetype:'',//房产类型
@@ -25,17 +25,17 @@ Page({
     },
     props:[
       {name:'name',msg:'请填写姓名'},
-      { name: 'idcard', msg: '请填写身份证号码' },
+      // { name: 'idcard', msg: '请填写身份证号码' },
       { name: 'phone', msg: '请填写手机号' },
-      { name: 'position', msg: '请填写职业' },
-      { name: 'city', msg: '请填写工作城市' }, 
-      { name: 'gjj', msg: '请选择是否有本地公积金' },
-      { name: 'sb', msg: '请选择是否有本地社保' },
+      { name: 'position', msg: '请选择职业' },
+      // { name: 'city', msg: '请填写工作城市' }, 
+      // { name: 'gjj', msg: '请选择是否有本地公积金' },
+      // { name: 'sb', msg: '请选择是否有本地社保' },
       { name: 'housetype', msg: '请选择房产类型' },
-      { name: 'zxqk', msg: '请选择装修情况' },
+      // { name: 'zxqk', msg: '请选择装修情况' },
       { name: 'area', msg: '请填写面积' },
-      { name: 'hcar', msg: '请选择是否有车' },
-      { name: 'xyqk', msg: '请选择信用情况' },
+      // { name: 'hcar', msg: '请选择是否有车' },
+      // { name: 'xyqk', msg: '请选择信用情况' },
       { name: 'money', msg: '请填写贷款金额' },
       { name: 'date', msg: '请填写贷款期限' },
     ],
@@ -43,7 +43,8 @@ Page({
     gjj:['有','无'],
     houseType: ['有房，但不确认房产类型','无房产','小产权房', '经适/限价房', '房改/危改房', '商铺','厂房','商住两用房','办公楼','军产房','商品住房','宅基地/自建房'],
     zx:['毛坯','简装修','精装修','豪华装修'],
-    xy: ['信用良好，无逾期', '无信用卡或贷款', '1年内逾期超过3次或超过90天','1年内逾期少于3次或少于90天']
+    xy: ['信用良好，无逾期', '无信用卡或贷款', '1年内逾期超过3次或超过90天','1年内逾期少于3次或少于90天'],
+    zy:['上班族','个体户','无固定职业','企业主','学生']
   },
   submit(){
     let props = this.data.props
@@ -84,6 +85,13 @@ Page({
       fail(res) {
        
       }
+    })
+  },
+  zyclick(){
+    this.actionSheet(this.data.zy, function (res) {
+      _this.setData({
+        'formData.position': res
+      })
     })
   },
   gjjclick(){

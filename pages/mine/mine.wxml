@@ -10,13 +10,48 @@
     </view>
   </view>
 </view>
-<i-cell title="借款记录" is-link i-class="border-b" url="/pages/recode/recode"></i-cell>
-<i-cell title="我的订单" is-link i-class="border-b"></i-cell>
-<i-cell title="修改手机号" is-link i-class="border-b"></i-cell>
-<i-cell title="电话客服" is-link i-class="border-b"></i-cell>
-<i-cell title="微信客服" is-link i-class="border-b"></i-cell>
-<i-cell title="关于我们" is-link i-class="border-b"></i-cell>
 
-
-<!-- <i-cell title="我的优惠券" is-link i-class="border-b"></i-cell> -->
-<!-- <i-cell title="成为经纪人" is-link i-class="border-b"></i-cell> -->
+<view class='panel panel-between border-b item-center' data-path='/pages/recode/recode' bindtap='navTo'>
+  <view class='panel-start item-center'>
+    <image src='/img/m1.png' class='icon-30'></image>
+    <view class='fo-30 ma-l30'>借款记录</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
+<view class='panel panel-between border-b item-center' data-path='/pages/recode/recode' bindtap='navTo'>
+  <view class='panel-start item-center'>
+    <image src='/img/m2.png' class='icon-30'></image>
+    <view class='fo-30 ma-l30'>我的订单</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
+<view class='panel panel-between border-b item-center' data-path='/pages/phone/phone' bindtap='navTo'>
+  <view class='panel-start item-center'>
+    <image src='/img/m3.png' class='icon-30'></image>
+    <view class='fo-30 ma-l30'>修改手机号</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
+<view class='panel panel-between border-b item-center' bindtap='makephonecall'>
+  <view class='panel-start item-center'>
+    <image src='/img/m4.png' class='icon-30'></image>
+    <view class='fo-30 ma-l30'>电话客服</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
+<button class='filter-btn' open-type='contact'>
+<view class='panel panel-between border-b item-center' >
+  <view class='panel-start item-center'>
+    <image src='/img/m5.png' class='icon-30'></image>
+    <view class='fo-30 ma-l30'>微信客服</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
+</button>
+<view class='panel panel-between border-b item-center' data-path='/pages/recode/recode' bindtap='navTo'>
+  <view class='panel-start item-center'>
+    <image src='/img/m6.png' class='icon-30'></image>
+    <view class='fo-30 ma-l30'>关于我们</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
