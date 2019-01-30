@@ -32,7 +32,7 @@ Page({
   onShareAppMessage(){
     return {
       title:'一站式房贷管家为你服务',
-      path:'/pages/index/index'
+      path:'/pages/index/index?wx_id='+wx.getStorageSync("user").id
     }
   }
  

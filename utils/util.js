@@ -1,6 +1,6 @@
 const util = {
-  API: 'http://129.28.89.58:3334/api/',
-  // API:'http://localhost:3334/api/',
+  // API: 'http://129.28.89.58:3334/api/',
+  API:'http://localhost:3334/api/',
   webSrc: 'https://hapi.ypyzy.top/dist/#/dayin_wx',
 
   /**
