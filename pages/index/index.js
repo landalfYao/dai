@@ -16,18 +16,43 @@ Page({
     }
     
   },
-  onLoad: function () {
+  onLoad: function (options) {
     wx.setNavigationBarColor({
       frontColor: '#000000',
       backgroundColor: '#ffffff',
     })
-    if(!wx.getStorageSync("g")){
-      // wx.redirectTo({
-      //   url: '/pages/guide/guide',
-      // })
-    }else{
-      wx.removeStorageSync("g")
+
+    let type = ''
+    let sid = ''
+    if(options.scene){
+      type='scan'
+      sid = options.scene
+    } else if (options.id){
+      type='share'
+      sid = options.id
     }
+    this.login(type,sid)
+  },
+  login(type,sid){
+    let formData = {
+      type : type,
+      sid:sid
+    }
+    wx.login({
+      success(res) {
+        formData.js_code = res.code
+        app.com.post('wx/user/login', formData, function (res) {
+          if (res.code == 1) {
+            wx.setStorageSync("user", res.data)
+          } else {
+            wx.showToast({
+              title: '失败',
+              icon: 'none'
+            })
+          }
+        })
+      }
+    })
   },
   onShareAppMessage(){
     return {
