@@ -1,0 +1,13 @@
+<view class='pa-l30 pa-r30'>
+  <view class='pa-t30 pa-b30 border-b ' wx:for="{{list}}">
+    <view class='panel-between'>
+      <view>
+        <view class='fo-30'>{{item.create_time}}</view>
+        <view class='fo-30'>佣金 ￥{{item.jjr_get}}</view>
+      </view>
+      <view class='fo-60'><text class='fo-26'>单号</text>{{item.order_id}}</view>
+    </view>
+    
+  </view>
+</view>
+<view class='text-center fo-30 pa-30' wx:if="{{list.length == 0}}"> 暂无数据 </view>

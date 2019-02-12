@@ -18,6 +18,20 @@ Page({
    */
   onLoad: function (options) {
     _this = this
+    this.getINfo()
+  },
+  getINfo(){
+    app.com.post('agent/get/id', {
+      wx_id: wx.getStorageSync("user").id
+    }, function (res) {
+      wx.hideLoading()
+      if (res.code == 1) {
+        wx.setStorageSync("qrcode", res.data.qrcode)
+        _this.setData({
+          msg:res.data
+        })
+      }
+    })
   },
   navTo(e) {
     app.com.navTo(e)

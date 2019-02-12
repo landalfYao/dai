@@ -1,0 +1,4 @@
+<view class='pa-30'>
+  <image src='{{qrcode}}' style='width:690rpx;height:690rpx'></image>
+  <!-- <view class='qnqs'   bindtap='submit'>保存图片</view> -->
+</view>

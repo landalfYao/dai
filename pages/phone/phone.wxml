@@ -1,5 +1,6 @@
 <view class="pa-l30 pa-r30 bg-w">
   <view class='pa-t30 pa-b30 border-b'>
-    <input class='w-100' placeholder='输入手机号' auto-focus></input>
+    <input class='w-100' placeholder='输入手机号' bindinput='phoneInput' auto-focus></input>
   </view>
+  <view class='qnqs'   bindtap='submit'>保存提交</view>
 </view>

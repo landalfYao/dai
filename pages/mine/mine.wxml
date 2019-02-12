@@ -8,6 +8,7 @@
         <view class='fo-w bold fo-30'><open-data type="userNickName" lang="zh_CN"></open-data></view>
       </view>
     </view>
+    <view wx:if="{{msg.qrcode}}" data-path="/pages/qrcode/qrcode" bindtap='navTo'><image src='/img/qr.png' class='icon-60'></image></view>
   </view>
 </view>
 
@@ -18,7 +19,7 @@
   </view>
   <image src='/img/right.png' class='icon-25'></image>
 </view>
-<view class='panel panel-between border-b item-center' data-path='/pages/recode/recode' bindtap='navTo'>
+<view class='panel panel-between border-b item-center' data-path='/pages/myorder/myorder' bindtap='navTo' wx:if="{{msg.qrcode}}">
   <view class='panel-start item-center'>
     <image src='/img/m2.png' class='icon-30'></image>
     <view class='fo-30 ma-l30'>我的订单</view>
@@ -48,10 +49,10 @@
   <image src='/img/right.png' class='icon-25'></image>
 </view>
 </button>
-<view class='panel panel-between border-b item-center' data-path='/pages/recode/recode' bindtap='navTo'>
+<!-- <view class='panel panel-between border-b item-center' data-path='/pages/recode/recode' bindtap='navTo'>
   <view class='panel-start item-center'>
     <image src='/img/m6.png' class='icon-30'></image>
     <view class='fo-30 ma-l30'>关于我们</view>
   </view>
   <image src='/img/right.png' class='icon-25'></image>
-</view>
+</view> -->
