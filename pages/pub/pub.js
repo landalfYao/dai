@@ -7,20 +7,20 @@ Page({
    */
   data: {
     formData:{
-      name:'张爸爸',
-      idcard:'33552222561515233x',
-      phone:'18589691235',
-      position:'上班族',
-      city:'杭州',
-      gjj:'有',//公积金
-      sb:'有',//社保
-      housetype:'公房',//房产类型
-      zxqk:'精装',//装修情况
-      area:'128',
-      hcar:'有',//是否有车
-      xyqk:'良好',//信用情况
-      money:'12',
-      date:'12',
+      name:'',
+      idcard:'',
+      phone:'',
+      position:'',
+      city:'',
+      gjj:'',//公积金
+      sb:'',//社保
+      housetype:'',//房产类型
+      zxqk:'',//装修情况
+      area:'',
+      hcar:'',//是否有车
+      xyqk:'',//信用情况
+      money:'',
+      date:'',
       title:'房贷通咨询'
     },
     props:[
