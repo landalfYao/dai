@@ -1,6 +1,6 @@
 .hh{
   padding: 30rpx;
-  background: linear-gradient(to  top,#02a3f7,#2575fc);
+  background: linear-gradient(to  top,#ff9c2b, #ea5514);
   /* border-radius:  */
 }
 .avatar{

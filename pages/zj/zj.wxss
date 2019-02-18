@@ -1,6 +1,6 @@
 .gh{
   padding: 50rpx;
-  background: linear-gradient(to  top,#02a3f7,#2575fc);
+  background: linear-gradient(to  top,#ff9c2b, #ea5514);
   text-align: center;
   font-size: 50rpx;
   color: #fff
@@ -16,10 +16,10 @@
 .gbgh{
   width: 170rpx;
   line-height: 60rpx;
-  border: 1rpx solid #02a3f7;
+  border: 1rpx solid #ea5514;
   text-align: center;
   border-radius: 60rpx;
   font-size: 26rpx;
-  color: #02a3f7;
+  color: #ea5514;
   margin-top: 10rpx
 }

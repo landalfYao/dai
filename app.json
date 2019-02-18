@@ -15,12 +15,12 @@
   ],
   "window":{
     "backgroundTextStyle":"dark",
-    "navigationBarBackgroundColor": "#2575fc",
-    "navigationBarTitleText": "房贷通",
+    "navigationBarBackgroundColor": "#ea5515",
+    "navigationBarTitleText": "房信通",
     "navigationBarTextStyle":"white"
   },
   "tabBar": {
-    "selectedColor": "#2575fc",
+    "selectedColor": "#ea5515",
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页",

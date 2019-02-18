@@ -17,7 +17,7 @@
   color: #2575fc;
 }
 .qnqs{
-  background: linear-gradient(to right top, #02a3f7, #2575fc);
+  background: linear-gradient(to right top, #ff9c2b, #ea5514);
   margin: auto;
   line-height: 100rpx;
   text-align: center;
@@ -32,13 +32,13 @@
 }
 
 .qnq {
-  background: linear-gradient(to right top, #02a3f7, #2575fc);
+  background: #fff;
   width: 350rpx;
   margin: auto;
   line-height: 100rpx;
   text-align: center;
   border-radius: 100rpx;
-  color: #fff;
+  color: #ea5514;
   margin-top: 190rpx
 }
 

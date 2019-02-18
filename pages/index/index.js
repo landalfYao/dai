@@ -17,10 +17,10 @@ Page({
     
   },
   onLoad: function (options) {
-    wx.setNavigationBarColor({
-      frontColor: '#000000',
-      backgroundColor: '#ffffff',
-    })
+    // wx.setNavigationBarColor({
+    //   frontColor: '#000000',
+    //   backgroundColor: '#ffffff',
+    // })
 
     let type = ''
     let sid = ''
