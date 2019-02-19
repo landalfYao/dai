@@ -38,7 +38,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -85,7 +85,13 @@
 				{
 					"id": -1,
 					"name": "order",
-					"pathName": "pages/myorder/myorder"
+					"pathName": "pages/myorder/myorder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "qr",
+					"pathName": "pages/qrcode/qrcode"
 				}
 			]
 		}

@@ -1,4 +1,4 @@
-// pages/qrcode/qrcode.js
+const app =getApp()
 Page({
 
   /**
@@ -16,6 +16,23 @@ Page({
       qrcode: wx.getStorageSync("qrcode")
     })
   },
-
+  saveqr(){
+    wx.showLoading({
+      title: '保存中',
+    })
+    wx.downloadFile({
+      url: wx.getStorageSync("qrcode"), // 仅为示例，并非真实的资源
+      success(res) {
+        console.log(res)
+        if (res.statusCode === 200) {
+          wx.hideLoading()
+          wx.saveImageToPhotosAlbum({
+            filePath:res.tempFilePath,
+            success(res) { }
+          })
+        }
+      }
+    })
+  }
   
 })

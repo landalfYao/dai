@@ -26,9 +26,10 @@
       "text": "首页",
       "iconPath": "img/t2.png",
       "selectedIconPath": "img/t1.png"
-    },{
+    },
+    {
       "pagePath": "pages/zj/zj",
-      "text": "银行直通车",
+ 
       "iconPath": "img/t6.png",
       "selectedIconPath": "img/t5.png"
     },

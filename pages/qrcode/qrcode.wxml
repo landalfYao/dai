@@ -2,3 +2,6 @@
   <image src='{{qrcode}}' style='width:690rpx;height:690rpx'></image>
   <!-- <view class='qnqs'   bindtap='submit'>保存图片</view> -->
 </view>
+<view class='pa-30'>
+<view class='qnqs' bindtap='saveqr'>保存二维码</view>
+</view>

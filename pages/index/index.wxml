@@ -29,7 +29,7 @@
 </view>
 <view class='asdf'>
 <view>
-   <view class='qnq'  data-path='/pages/pub/pub' bindtap='navTo'>去拿钱</view>
+   <view class='qnq'  data-path='/pages/pub/pub' bindtap='navTo'>立即咨询</view>
 </view>
  
 </view>
