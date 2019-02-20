@@ -1,8 +1,8 @@
 <i-panel title="填写资料(以下信息必填)">
   <i-input value="{{ formData.name }}" right title="姓名" placeholder="输入真实姓名" />
   <i-input value="{{ formData.phone }}" right type="number" title="手机号" i-class='border-t' maxlength="11" placeholder="请输入11位手机号码" />
-  <i-input value="{{ formData.money }}" right type="text" title="贷款金额(单位:万元)"  placeholder="贷款金额" />
-  <i-input value="{{ formData.date }}" right type="text" title="贷款期限(单位:月)" i-class='border-t' placeholder="请输入月数" />
+  <!-- <i-input value="{{ formData.money }}" right type="text" title="贷款金额(单位:万元)"  placeholder="贷款金额" />
+  <i-input value="{{ formData.date }}" right type="text" title="贷款期限(单位:月)" i-class='border-t' placeholder="请输入月数" /> -->
   <i-input value="{{ formData.area }}" right type="text" title="面积" i-class='border-t' placeholder="填写面积" />
   <!-- <i-input value="{{ formData.position }}" right  title="职业" i-class="border-t" placeholder="输入您的职业" /> -->
   <i-cell title="职业" value="{{formData.position || '请选择'}}" bind:click="zyclick" is-link i-class="border-t"></i-cell>

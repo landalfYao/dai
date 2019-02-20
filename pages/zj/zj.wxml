@@ -1,4 +1,4 @@
-<view class="gh" wx:if="{{list.length >0}}">合 作 单 位</view>
+<view class="gh" >合 作 银 行</view>
 <view wx:if="{{list.length > 0}}">
   <view class='bg-g pa-t20 pa-b20 pa-l30 pa-l30 fo-30 fo-g'>
     推荐服务
