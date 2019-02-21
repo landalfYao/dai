@@ -27,12 +27,7 @@
       "iconPath": "img/t2.png",
       "selectedIconPath": "img/t1.png"
     },
-    {
-      "pagePath": "pages/zj/zj",
-      "text": "合作银行",
-      "iconPath": "img/t6.png",
-      "selectedIconPath": "img/t5.png"
-    },
+    
     {
       "pagePath": "pages/mine/mine",
       "text": "我的",
