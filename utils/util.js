@@ -1,7 +1,6 @@
 const util = {
   API: 'https://fdt.landalf.cn/api/',
   // API:'http://localhost:3334/api/',
-  // webSrc: 'https://hapi.ypyzy.top/dist/#/dayin_wx',
 
   /**
    * 获取窗口大小

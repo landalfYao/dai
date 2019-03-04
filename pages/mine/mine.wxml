@@ -12,14 +12,14 @@
   </view>
 </view>
 
-<view class='panel panel-between border-b item-center' data-path='/pages/recode/recode' bindtap='navTo'>
+<view class='panel panel-between border-b item-center' data-path='/pages/recode/recode' bindtap='navTo' wx:if="{{showPage!=1}}">
   <view class='panel-start item-center'>
     <image src='/img/m1.png' class='icon-30'></image>
     <view class='fo-30 ma-l30'>咨询记录</view>
   </view>
   <image src='/img/right.png' class='icon-25'></image>
 </view>
-<view class='panel panel-between border-b item-center' data-path='/pages/myorder/myorder' bindtap='navTo' wx:if="{{msg.qrcode}}">
+<view class='panel panel-between border-b item-center' data-path='/pages/myorder/myorder' bindtap='navTo' wx:if="{{msg.qrcode && showPage!=1}}" >
   <view class='panel-start item-center'>
     <image src='/img/m2.png' class='icon-30'></image>
     <view class='fo-30 ma-l30'>我的订单</view>

@@ -1,35 +1,22 @@
-<!-- <view class="indd">
-  <view class='text-center fo-w fo-40 pa-t30'>房贷难？利率高？流程晕？</view>
-  <view class='text-center fo-w fo-30 ma-t30'>一站式房贷管家为你服务</view>
-
-  <view>
-    <view class='jjd'>
-      <view class='modi'></view>
-    </view>
-    <view class='iuh panel-between'>
-      <view class='itemsd'></view>
-      <view class='itemsd'></view>
+<view wx:if="{{showPage != 1}}">
+  <view class='byd'>
+    <image src="/img/d.jpg" style="width:750rpx;height:100vh" mode="aspectFill"></image>
+  </view>
+  <view class='asdf'>
+    <view>
+      <view class='qnq' data-path='/pages/pub/pub' bindtap='navTo'>立即咨询</view>
     </view>
   </view>
+</view>
 
-  <view class='mkl text-center'>
-    <view class='fo-w fo-30'>信用额度高达</view>
-    <view class='mong ma-t20'>1000000</view>
+<view wx:if="{{showPage == 1}}">
+  <view class='pa-30 '>
+    <input placeholder='搜索项目' class='bl' bindinput='sousuo'></input>
+    <view wx:if="{{list.length == 0}}">搜索无结果</view>
+    <view class='border-b panel panel-between' wx:for="{{list}}">
+      <view class='fo-30'>{{item.create_time}}</view>
+      <view class='fo-30'>{{item.title}}</view>
+    </view>
   </view>
-  <view class='fo-28 fo-w text-center ma-t30 pa-t30'>连接每个家的幸福财富
-  </view>
-</view>
-<view class='pa-30 ma-t30'>
-  <view class='btnr fo-32 fo-w ma-t30' data-path='/pages/pub/pub' bindtap='navTo'>去拿钱</view>
-</view> -->
-<view class='byd'>
-<image src="/img/d.jpg" style="width:750rpx;height:100vh" mode="aspectFill"></image>
-
-
-</view>
-<view class='asdf'>
-<view>
-   <view class='qnq'  data-path='/pages/pub/pub' bindtap='navTo'>立即咨询</view>
-</view>
- 
+  
 </view>

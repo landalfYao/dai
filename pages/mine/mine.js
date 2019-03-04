@@ -6,11 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    showPage:1
   },
   makephonecall(){
     wx.makePhoneCall({
-      phoneNumber: '111',
+      phoneNumber: wx.getStorageSync("user").dh,
     })
   },
   /**
@@ -47,6 +47,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    _this.setData({
+      showPage: wx.getStorageSync("user").showPage ,
+      dh: wx.getStorageSync("user").dh
+    })
     if (!wx.getStorageSync("user").phone) {
       wx.navigateTo({
         url: '/pages/login/login',

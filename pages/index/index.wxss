@@ -59,3 +59,10 @@ width: 20rpx;
 .mkl{
   margin-top: -180rpx
 }
+.bl{
+  background: #f3f3f3;
+  padding: 0 30rpx;
+  line-height: 100rpx;
+  height: 100rpx;
+  font-size: 30rpx
+}

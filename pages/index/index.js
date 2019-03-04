@@ -1,10 +1,11 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+let _this;
 Page({
   data: {
-    
+    showPage:1,
+    list:[]
   },
   navTo(e) {
     if(!wx.getStorageSync("user").phone){
@@ -16,12 +17,29 @@ Page({
     }
     
   },
+  sousuo(e){
+    app.com.post('order/get', {
+      pageIndex: 1,
+      pageSize: 10,
+      wheres: 'orders.is_delete =0 and orders.title like "%' + e.detail.value +'%"' ,
+      sorts: 'orders.create_time desc'
+    }, function (res) {
+      if (res.code == 1) {
+        let arr = []
+        
+          arr = res.data.list
+        
+        
+        _this.setData({
+          list: arr,
+          total: res.data.total
+        })
+      }
+    })
+  },
   onLoad: function (options) {
-    // wx.setNavigationBarColor({
-    //   frontColor: '#000000',
-    //   backgroundColor: '#ffffff',
-    // })
-
+    
+    _this = this
     let type = ''
     let sid = ''
     if(options.scene){
@@ -44,6 +62,9 @@ Page({
         app.com.post('wx/user/login', formData, function (res) {
           if (res.code == 1) {
             wx.setStorageSync("user", res.data)
+            _this.setData({
+              showPage: res.data.showPage 
+            })
           } else {
             wx.showToast({
               title: '失败',
