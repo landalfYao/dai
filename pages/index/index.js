@@ -18,18 +18,20 @@ Page({
     
   },
   sousuo(e){
+    wx.showLoading({
+      title: '查询中',
+      task:true
+    })
     app.com.post('order/get', {
       pageIndex: 1,
       pageSize: 10,
       wheres: 'orders.is_delete =0 and orders.title like "%' + e.detail.value +'%"' ,
       sorts: 'orders.create_time desc'
     }, function (res) {
+      wx.hideLoading()
       if (res.code == 1) {
         let arr = []
-        
-          arr = res.data.list
-        
-        
+        arr = res.data.list
         _this.setData({
           list: arr,
           total: res.data.total

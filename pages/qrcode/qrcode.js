@@ -24,11 +24,29 @@ Page({
       url: wx.getStorageSync("qrcode"), // 仅为示例，并非真实的资源
       success(res) {
         console.log(res)
+        wx.hideLoading()
         if (res.statusCode === 200) {
-          wx.hideLoading()
+          
           wx.saveImageToPhotosAlbum({
             filePath:res.tempFilePath,
-            success(res) { }
+            success(res) {
+              console.log(res)
+            },fail(res){
+              console.log(res)
+              wx.openSetting({
+                success(settingdata) {
+                  console.log(settingdata)
+                  if (settingdata.authSetting['scope.writePhotosAlbum']) {
+                    console.log('获取权限成功，给出再次点击图片保存到相册的提示。')
+                  } else {
+                    console.log('获取权限失败，给出不给权限就无法正常使用的提示')
+                  }
+                },
+                fail(res){
+                  console.log(res)
+                }
+              })
+            }
           })
         }
       }

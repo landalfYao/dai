@@ -1,5 +1,5 @@
 <view class="gh" >合 作 银 行</view>
-<view wx:if="{{list.length > 0}}">
+<view wx:if="{{list.length > 0 && showPage != 1}}">
   <view class='bg-g pa-t20 pa-b20 pa-l30 pa-l30 fo-30 fo-g'>
     推荐服务
   </view>
@@ -23,9 +23,9 @@
 
 <view wx:if="{{list.length > 1}}">
   <view class='bg-g pa-t20 pa-b20 pa-l30 pa-l30 fo-30 fo-g'>
-    其他服务
+    {{showPage != 1 ? '其他服务':'所有银行'}}
   </view>
-  <view class='panel panel-between border-b' wx:for="{{list}}" wx:if="{{index != 0}}">
+  <view class='panel panel-between border-b' wx:for="{{list}}" wx:if="{{showPage != 1 ? index != 0:true}}">
     <view class='avatar'>
       <image class='avatar' src='{{item.icon}}' mode='aspectFill'></image>
     </view>
@@ -34,7 +34,7 @@
         <view class='fo-30 bold'>{{item.bankname}}</view>
         <!-- <view class='fo-m fo-26 bold'>{{item.p_min}}万元-{{item.p_max}}万元</view> -->
       </view>
-      <view class='panel-between item-center'>
+      <view class='panel-between item-center' wx:if="{{showPage != 1}}">
         <!-- <view class='fo-26 fo-g ma-t10' style='width:300rpx'></view> -->
         <view class='gbgh' data-title='{{item.bankname+"贷款咨询"}}' bindtap='navto'>立即咨询</view>
       </view>

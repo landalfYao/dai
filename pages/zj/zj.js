@@ -30,6 +30,9 @@ Page({
    */
   onLoad: function (options) {
     _this = this
+    _this.setData({
+      showPage: wx.getStorageSync("user").showPage
+    })
     this.getList(0)
   },
   getList(type){
