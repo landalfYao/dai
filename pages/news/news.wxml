@@ -1,0 +1,5 @@
+<view class="pa-30 fo-30">
+  <view class="fo-30 bold">{{news.title}}</view>
+  <view class="fo-26 fo-g ma-b20">{{news.create_time}}</view>
+  <rich-text type="text" nodes="{{news.content}}"></rich-text>
+</view>

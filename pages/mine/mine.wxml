@@ -49,6 +49,13 @@
   <image src='/img/right.png' class='icon-25'></image>
 </view>
 </button>
+<view class='panel panel-between border-b item-center' bindtap='location'>
+  <view class='panel-start item-center'>
+    <image src='/img/dh.png' class='icon-30'></image>
+    <view class='fo-30 ma-l30'>导航</view>
+  </view>
+  <image src='/img/right.png' class='icon-25'></image>
+</view>
 <!-- <view class='panel panel-between border-b item-center' data-path='/pages/recode/recode' bindtap='navTo'>
   <view class='panel-start item-center'>
     <image src='/img/m6.png' class='icon-30'></image>

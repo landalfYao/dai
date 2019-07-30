@@ -1,4 +1,4 @@
-<view wx:if="{{showPage != 1}}">
+<!-- <view wx:if="{{showPage != 1}}">
   <view class='byd'>
     <image src="/img/d.jpg" style="width:750rpx;height:100vh" mode="aspectFill"></image>
   </view>
@@ -7,31 +7,21 @@
       <view class='qnq' data-path='/pages/pub/pub' bindtap='navTo'>立即咨询</view>
     </view>
   </view>
-</view>
+</view> -->
 
-<view wx:if="{{showPage == 1}}">
-  <view class='pa-30 '>
-    <input placeholder='查询平台咨询记录' class='bl' bindinput='sousuo'></input>
-    <view wx:if="{{list.length == 0}}" class='fo-30 pa-30 text-center'>暂无搜索记录</view>
-    <view class='border-b panel panel-between' wx:for="{{list}}">
-      <view class='fo-30'>{{item.create_time}}</view>
-      <view class='fo-30'>{{item.title}}</view>
-    </view>
+<swiper indicator-dots="true"
+  autoplay="true" interval="5000" duration="500" style="height:400rpx;width:750rpx">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item.img}}"  mode="aspectFill" style="height:400rpx;width:750rpx"/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="pa-l30 pa-r30 pa-t20 pa-b20 fo-26 fo-g border-b">行业新闻</view>
+<navigator class="pa-30 bg-w border-b panel-between" wx:for="{{news}}"  url="/pages/news/news?id={{item.id}}">
+  <image src="{{item.img}}" class="afdsd" mode="aspectFill"></image>
+  <view style="width:450rpx">
+    <view class="fo-30">{{item.title}}</view>
+    <view class="fo-26 fo-g ma-t20">{{item.create_time}}</view>
   </view>
-  <view class='pa-30 bg-g fo-30'>站内信息</view>
-  <view class='pa-30'>
-    <view class='pa-t30 pa-b30 border-b '>
-      <image src='http://imgsrc.baidu.com/imgad/pic/item/472309f790529822ae9b54e7ddca7bcb0a46d46e.jpg' style='width:100%;height:250rpx;' mode='aspectFill'></image>
-
-      <view class='fo-30 ma-t20 fo-30'>2018-11月-23日，房信通牵手中国工商银行。发展群体共赢战略计划。</view>
-    </view>
-
-    <view class='pa-t30 pa-b30 border-b '>
-      <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551787515006&di=85c503525fdd99622e20122f8434b9f4&imgtype=0&src=http%3A%2F%2Fi4.hexun.com%2F2017-07-31%2F190254645.jpg' style='width:100%;height:250rpx;' mode='aspectFill'></image>
-
-      <view class='fo-30 ma-t20 fo-30'>2018-9月-30日，房信通牵手中国农业银行。发展群体共赢战略计划。</view>
-    </view>
-    
-  </view>
-  
-</view>
+</navigator >

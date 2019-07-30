@@ -1,6 +1,6 @@
 <view class='mkl' bindtap='clearc'>跳过 {{num}}</view>
 <view class='byd'>
-<image src="/img/d.jpg" style="width:750rpx;height:100vh" mode="aspectFill"></image>
+<image src="/img/b.jpg" style="width:750rpx;height:100vh" mode="aspectFill"></image>
 </view>
 
 

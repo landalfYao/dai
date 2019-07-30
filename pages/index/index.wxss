@@ -4,6 +4,13 @@
    min-height: 400rpx;
    padding-top: 100rpx
 }
+page{
+  background-color: #f3f3f3
+}
+.afdsd{
+  width: 220rpx;
+  height: 150rpx
+}
 .jjd{
   height: 260rpx;
   margin-top: 100rpx;

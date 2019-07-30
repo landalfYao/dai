@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "填写资料",
+  "navigationBarTitleText": "免费申请",
   "usingComponents": {
     "i-panel": "../../dist/panel/index",
     "i-input": "../../dist/input/index",

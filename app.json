@@ -1,6 +1,7 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/guide/guide",
     "pages/logs/logs",
     "pages/zj/zj",
     "pages/mine/mine",
@@ -8,36 +9,45 @@
     "pages/login/login",
     "pages/recode/recode",
     "pages/recode/detail/detail",
-    "pages/guide/guide",
     "pages/phone/phone",
     "pages/qrcode/qrcode",
-    "pages/myorder/myorder"
+    "pages/myorder/myorder",
+    "pages/news/news"
   ],
-  "window":{
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ea5515",
-    "navigationBarTitleText": "房信通",
-    "navigationBarTextStyle":"white"
+    "navigationBarTitleText": "融师兄",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "selectedColor": "#ea5515",
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath": "img/t2.png",
-      "selectedIconPath": "img/t1.png"
-    },
-    {
-      "pagePath": "pages/zj/zj",
-      "text": "合作银行",
-      "iconPath": "img/t6.png",
-      "selectedIconPath": "img/t5.png"
-    },
-    {
-      "pagePath": "pages/mine/mine",
-      "text": "我的",
-      "iconPath": "img/t4.png",
-      "selectedIconPath": "img/t3.png"
-    }]
-  }
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/t2.png",
+        "selectedIconPath": "img/t1.png"
+      },
+      {
+        "pagePath": "pages/zj/zj",
+        "text": "合作银行",
+        "iconPath": "img/t6.png",
+        "selectedIconPath": "img/t5.png"
+      },
+      {
+        "pagePath": "pages/pub/pub",
+        "text": "免费申请",
+        "iconPath": "img/t8.png",
+        "selectedIconPath": "img/t7.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "img/t4.png",
+        "selectedIconPath": "img/t3.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
 }

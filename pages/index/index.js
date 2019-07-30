@@ -17,6 +17,40 @@ Page({
     }
     
   },
+  getCar(){
+    app.com.post('carousel/get', {
+      pageIndex: 1,
+      pageSize: 5,
+      wheres: 'is_delete=0',
+      sorts: 'sort asc'
+    }, function (res) {
+      wx.hideLoading()
+      if (res.code == 1) {
+        let arr = []
+        arr = res.data.list
+        _this.setData({
+          imgUrls: arr,
+        })
+      }
+    })
+  },
+  getNews() {
+    app.com.post('news/get', {
+      pageIndex: 1,
+      pageSize: 50,
+      wheres: 'is_delete=0',
+      sorts: 'create_time desc'
+    }, function (res) {
+      wx.hideLoading()
+      if (res.code == 1) {
+        let arr = []
+        arr = res.data.list
+        _this.setData({
+          news: arr,
+        })
+      }
+    })
+  },
   sousuo(e){
     wx.showLoading({
       title: '查询中',
@@ -40,7 +74,6 @@ Page({
     })
   },
   onLoad: function (options) {
-    
     _this = this
     let type = ''
     let sid = ''
@@ -51,7 +84,14 @@ Page({
       type='share'
       sid = options.id
     }
-    this.login(type,sid)
+    this.getCar()
+    this.getNews()
+    this.login(type,sid);
+    if(!wx.getStorageSync("g")){
+      wx.redirectTo({
+        url: '/pages/guide/guide',
+      })
+    }
   },
   login(type,sid){
     let formData = {
