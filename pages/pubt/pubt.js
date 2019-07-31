@@ -6,25 +6,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-    formData:{
-      name:'',
-      idcard:'',
-      phone:'',
-      position:'',
-      city:'',
-      gjj:'',//公积金
-      sb:'',//社保
-      housetype:'',//房产类型
-      zxqk:'',//装修情况
-      area:'',
-      hcar:'',//是否有车
-      xyqk:'',//信用情况
-      money:'',
-      date:'',
-      title:'房贷通咨询'
+    formData: {
+      name: '',
+      idcard: '',
+      phone: '',
+      position: '',
+      city: '',
+      gjj: '',//公积金
+      sb: '',//社保
+      housetype: '',//房产类型
+      zxqk: '',//装修情况
+      area: '',
+      hcar: '',//是否有车
+      xyqk: '',//信用情况
+      money: '',
+      date: '',
+      title: '房贷通咨询'
     },
-    props:[
-      {name:'name',msg:'请填写姓名'},
+    props: [
+      { name: 'name', msg: '请填写姓名' },
       // { name: 'idcard', msg: '请填写身份证号码' },
       { name: 'phone', msg: '请填写手机号' },
       { name: 'position', msg: '请选择职业' },
@@ -39,22 +39,22 @@ Page({
       // { name: 'money', msg: '请填写贷款金额' },
       // { name: 'date', msg: '请填写贷款期限' },
     ],
-    htflag:0,
-    gjj:['有','无'],
-    houseType: ['有房，但不确认房产类型','无房产','小产权房', '经适/限价房', '房改/危改房', '商铺','厂房','商住两用房','办公楼','军产房','商品住房','宅基地/自建房'],
-    zx:['毛坯','简装修','精装修','豪华装修'],
-    xy: ['信用良好，无逾期', '无信用卡或贷款', '1年内逾期超过3次或超过90天','1年内逾期少于3次或少于90天'],
-    zy:['上班族','个体户','无固定职业','企业主','学生']
+    htflag: 0,
+    gjj: ['有', '无'],
+    houseType: ['有房，但不确认房产类型', '无房产', '小产权房', '经适/限价房', '房改/危改房', '商铺', '厂房', '商住两用房', '办公楼', '军产房', '商品住房', '宅基地/自建房'],
+    zx: ['毛坯', '简装修', '精装修', '豪华装修'],
+    xy: ['信用良好，无逾期', '无信用卡或贷款', '1年内逾期超过3次或超过90天', '1年内逾期少于3次或少于90天'],
+    zy: ['上班族', '个体户', '无固定职业', '企业主', '学生']
   },
-  jops(e){
+  jops(e) {
     let formData = this.data.formData;
     formData[e.currentTarget.dataset.name] = e.detail.detail.value;
     this.setData({
-      formData:formData
+      formData: formData
     })
     // console.log(e.detail.detail.value)
   },
-  submit(){
+  submit() {
     let props = this.data.props
     let formData = this.data.formData
     let temp = -1
@@ -64,66 +64,66 @@ Page({
     //     break;
     //   }
     // }
-    if(temp == -1){
+    if (temp == -1) {
       wx.showLoading({
         title: '提交中',
       })
       console.log(formData)
       formData.wx_id = wx.getStorageSync("user").id
-      app.com.post('order/add',formData,function(res){
+      app.com.post('order/add', formData, function (res) {
         wx.hideLoading()
-        if(res.code == 1){
+        if (res.code == 1) {
           wx.showToast({
             title: '提交成功'
           })
         }
       })
-    }else{
+    } else {
       wx.showToast({
         title: props[temp].msg,
-        icon:'none'
+        icon: 'none'
       })
     }
   },
-  actionSheet(arr,cb){
+  actionSheet(arr, cb) {
     wx.showActionSheet({
       itemList: arr,
       success(res) {
         cb(arr[res.tapIndex])
       },
       fail(res) {
-       
+
       }
     })
   },
-  zyclick(){
+  zyclick() {
     this.actionSheet(this.data.zy, function (res) {
       _this.setData({
         'formData.position': res
       })
     })
   },
-  gjjclick(){
-    this.actionSheet(this.data.gjj,function(res){
+  gjjclick() {
+    this.actionSheet(this.data.gjj, function (res) {
       _this.setData({
         'formData.gjj': res
       })
     })
   },
-  sbclick(){
+  sbclick() {
     this.actionSheet(this.data.gjj, function (res) {
       _this.setData({
         'formData.sb': res
       })
     })
   },
-  htclick(e){
-    
-      _this.setData({
-        'formData.housetype': this.data.houseType[e.detail.value],
-        htfalg:e.detail.value
-      })
-    
+  htclick(e) {
+
+    _this.setData({
+      'formData.housetype': this.data.houseType[e.detail.value],
+      htfalg: e.detail.value
+    })
+
   },
   zxclick() {
     this.actionSheet(this.data.zx, function (res) {
@@ -139,7 +139,7 @@ Page({
       })
     })
   },
-  xyclick(){
+  xyclick() {
     this.actionSheet(this.data.xy, function (res) {
       _this.setData({
         'formData.xyqk': res
@@ -151,12 +151,12 @@ Page({
    */
   onLoad: function (options) {
     _this = this
-    if(options.title){
+    if (options.title) {
       this.setData({
         'formData.title': options.title
       })
     }
-    
+
   },
 
 })

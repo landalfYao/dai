@@ -20,7 +20,7 @@ Page({
       })
     } else {
       wx.navigateTo({
-        url: '/pages/pub/pub?title=' + e.currentTarget.dataset.title,
+        url: '/pages/pubt/pubt?title=' + e.currentTarget.dataset.title,
       })
     }
     

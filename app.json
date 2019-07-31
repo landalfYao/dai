@@ -12,7 +12,8 @@
     "pages/phone/phone",
     "pages/qrcode/qrcode",
     "pages/myorder/myorder",
-    "pages/news/news"
+    "pages/news/news",
+    "pages/pubt/pubt"
   ],
   "window": {
     "backgroundTextStyle": "dark",
