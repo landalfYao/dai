@@ -31,7 +31,8 @@ Page({
   onLoad: function (options) {
     _this = this
     _this.setData({
-      showPage: wx.getStorageSync("user").showPage
+      showPage: wx.getStorageSync("user").showPage,
+      des: wx.getStorageSync("user").des || ''
     })
     this.getList(0)
   },
