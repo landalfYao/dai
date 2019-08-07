@@ -1,6 +1,6 @@
 const util = {
-  // API: 'https://fdt.landalf.cn/api/',
-  API:'http://localhost:3334/api/',
+  API: 'https://fdt.landalf.cn/api/',
+  // API:'http://localhost:3334/api/',
 
   /**
    * 获取窗口大小

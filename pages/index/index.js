@@ -87,7 +87,7 @@ Page({
     this.getCar()
     this.getNews()
     this.login(type,sid);
-    if(!wx.getStorageSync("g")){
+    if(!wx.getStorageSync("g") && wx.getStorageSync("user").showPage != 1){
       wx.redirectTo({
         url: '/pages/guide/guide',
       })
