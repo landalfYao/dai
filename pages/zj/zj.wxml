@@ -3,7 +3,9 @@
 </view>
 <view class="pa-30 bg-w">
 <view class="fo-b fo-26 text-left " style="line-height:50rpx">
+
     {{des}}
+
   </view>  
 </view>
 <!-- <view wx:if="{{list.length > 0 && showPage != 1}}">
