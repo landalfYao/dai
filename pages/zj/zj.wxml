@@ -28,11 +28,11 @@
   </view>
 </view> -->
 
-<view wx:if="{{list.length > 1}}">
+<view wx:if="{{list.length > 0}}">
   <view class='bg-g pa-t20 pa-b20 pa-l30 pa-l30 fo-30 fo-g'>
     合作银行
   </view>
-  <view class='panel panel-between border-b' wx:for="{{list}}" wx:if="{{showPage != 1 ? index != 0:true}}">
+  <view class='panel panel-between border-b' wx:for="{{list}}" >
     <view class='avatar'>
       <image class='avatar' src='{{item.icon}}' mode='aspectFill'></image>
     </view>
